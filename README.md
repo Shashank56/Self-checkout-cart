@@ -1,1 +1,1 @@
-# self-chechout-cart
+# self-checkout-cart
