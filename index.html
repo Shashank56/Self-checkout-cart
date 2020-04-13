@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Torque Shopping Made Easy</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  </head>
+  <body>
+    <!-- <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>. -->
+    <div class="container">
+    <main>
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <form action="">
+
+                    <label for="item">ITEM : </label>
+                    <input type="text" id = "item" style="width: 12rem;">
+                    <label for="Quantity">QUANTITY : </label>   
+                    <input type= "number" id = "Quantity" style="width:4rem;">
+                    <button id="add-button">add</i>
+                    </button>
+                </form>
+        
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+        
+                <div id="shopping-lists">
+                  <!-- shopping lists get inserted here -->
+                </div>
+            
+                <ol id="shopping-list-items" class="collection">
+                  <!-- shopping list items get inserted here -->
+                </ol>
+                
+            </div>
+            
+        </div>
+        <!-- add more stuff button -->
+      </main>
+    </div>
+    <script>
+        $(calculateSum);
+
+        function calculateSum() {
+
+            var sum = 0;
+            $(".price").each(function() {
+
+                var value = $(this).text();
+                if(!isNaN(value) && value.length != 0) {
+                    sum += parseFloat(value);
+                }
+            });
+        }
+        $('#Total').text(sum); 
+    </script>
+  </body>
+</html>
