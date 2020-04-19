@@ -7,8 +7,8 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script type=text/javascript href="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type=text/javascript href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <!-- <script>document.write(process.versions.node)</script>,
@@ -17,13 +17,11 @@
     <div class="container">
     <main>
         <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-4 col-md-4">
                 <form action="">
-
+                    <br> <br>
                     <label for="item">ITEM : </label>
                     <input type="text" id = "item" style="width: 12rem;">
-                    <label for="Quantity">QUANTITY : </label>   
-                    <input type= "number" id = "Quantity" style="width:4rem;">
                     <button id="add-button">add</i>
                     </button>
                 </form>
@@ -49,7 +47,17 @@
                 </ol>
                 
             </div>
-            
+            <div class="col-sm-4 col-md-4">
+              <div class="scroll">
+                <img src="/labels/fogg.jpeg" alt=""/>
+                <img src="/labels/oreo.jpeg" alt=""/>
+                <img src="/labels/teapowder.jpeg" alt=""/>
+
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+
+            </div>
         </div>
         <!-- add more stuff button -->
       </main>

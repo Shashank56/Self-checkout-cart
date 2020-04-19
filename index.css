@@ -5,3 +5,8 @@ body {
     background-size: cover;
     font-family: 'Lobster', cursive;
 }
+
+img {
+    border: solid 1px red;
+    margin: 10px;
+  }
