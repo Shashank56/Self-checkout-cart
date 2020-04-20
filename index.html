@@ -17,15 +17,7 @@
     <div class="container">
     <main>
         <div class="row">
-            <div class="col-sm-4 col-md-4">
-                <form action="">
-                    <br> <br>
-                    <label for="item">ITEM : </label>
-                    <input type="text" id = "item" style="width: 12rem;">
-                    <button id="add-button">add</i>
-                    </button>
-                </form>
-        
+            <div class="col-sm-4 col-md-4" id="part">
                 <table class="table">
                     <thead>
                         <tr>
@@ -47,22 +39,29 @@
                 </ol>
                 
             </div>
-            <div class="col-sm-4 col-md-4">
-              <div class="scroll">
-                <img src="/labels/fogg.jpeg" alt=""/>
-                <img src="/labels/oreo.jpeg" alt=""/>
-                <img src="/labels/teapowder.jpeg" alt=""/>
+            <div class="col-sm-4 col-md-4" id="part">
+              <label for="Selecting item">Item</label>
+              <select name="item" id="items">
+                <option value="Default">select item</option>
+                <option value="labels/fogg.jpeg">Fogg</option>
+                <option value="labels/teapowder.jpeg">Tea Powder</option>
+                <option value="labels/medimix.jpeg">medimix</option>
+                <option value="labels/yippee.jpeg">Yippee</option>
+                <option value="labels/oreo.jpeg">Oreo</option>
+                <!-- <option value="Fogg">Fogg</option> -->
 
-              </div>
+              </select>
+              <button>submit</button><br><br>
+              <img src="" id='changeImage'/>
             </div>
-            <div class="col-sm-4 col-md-4">
+            <div class="col-sm-4 col-md-4" id="part">
 
             </div>
         </div>
         <!-- add more stuff button -->
       </main>
     </div>
-    <script>
+    <!-- <script>
         $(calculateSum);
 
         function calculateSum() {
@@ -77,6 +76,18 @@
             });
         }
         $('#Total').text(sum); 
+    </script> -->
+    <script>
+      window.onload = function () {
+        document.getElementById("items").onchange = showformatimage;
+        
+      };
+      function showformatimage(){
+        var image = document.getElementById("changeImage");
+        var dropd = document.getElementById("items");
+        image.src = dropd.value;
+        return false;
+      }
     </script>
   </body>
 </html>

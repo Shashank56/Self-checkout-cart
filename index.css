@@ -4,9 +4,21 @@ body {
     /* background: url(https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1350&q=80) center center; */
     background-size: cover;
     font-family: 'Lobster', cursive;
+    padding: 3rem;
+    border: 2mm solid rgb(184, 196, 85);
 }
 
-img {
-    border: solid 1px red;
-    margin: 10px;
-  }
+.container{
+    border-style: groove;
+    width : 1000px;
+    height: 450px;
+    padding: 4mm;
+}
+
+#part{
+    border-style: groove;
+    widows: 30px;
+    width: 240px;
+    height: max-content;
+    padding: 4mm;
+}
